@@ -38,4 +38,4 @@ print(weird_sum([5,4,3,2,1]))
 
 print([3,4]+['bb',':'])
 
-a=['world']
+a=['world',2,4,5]
