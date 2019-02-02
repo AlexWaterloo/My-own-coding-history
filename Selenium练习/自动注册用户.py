@@ -1,0 +1,12 @@
+from selenium import webdriver
+driver = webdriver.Chrome("C:\Program Files (x86)\chromedriver_win32\chromedriver.exe")
+driver.fullscreen_window()
+driver.get('https://www.amazon.com/')
+driver.find_element_by_xpath('//span[contains(text(),"Hello, Sign in")]').click()
+# driver.find_element_by_xpath('//*[@id="ap_customer_name"]').send_keys('alexzhangqing')
+driver.find_element_by_xpath('//input[@name="email"]').send_keys('422209555@qq.com')
+driver.find_element_by_xpath('//input[@id="ap_password"]').send_keys('zhangqing123@')
+# driver.find_element_by_xpath('//*[@id="ap_password_check"]').send_keys('zhangqing123@')
+driver.find_element_by_xpath('//*[@id="signInSubmit"]').click()
+driver.find_element_by_xpath('//input[@name="field-keywords"]').send_keys('iphone X\n')
+driver.find_element_by_xpath('//span[contains(text(),"The new generation of iPhone.")]').click()
